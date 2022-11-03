@@ -56,3 +56,7 @@
 .msgIcon {
   width: 18px;
 }
+
+.headerClickable {
+  cursor: pointer;
+}

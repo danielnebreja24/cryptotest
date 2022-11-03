@@ -1,4 +1,7 @@
-import { Button } from "antd";
+import { Button, Col, Row } from "antd";
+import { CryptoChart } from "../Cryptochart/cryptoChart";
+import { CryptoPair } from "../Cryptopair/cryptoPair";
+import { Instrument } from "../Instrument/instrument";
 import "./dashboard.css";
 
 export const Dashboard = () => {
@@ -9,12 +12,20 @@ export const Dashboard = () => {
           <b>Crypto</b> Dashboard
         </span>
         <span className="dashBoard_buttons">
-          <Button type="text" dark>
-            Invite a Friend
-          </Button>
+          <button className="btn btnDark">Invite a Friend</button>
           <Button type="primary">New Project</Button>
         </span>
       </div>
+      {/* INSTRUMENT PANEL */}
+      <Instrument />
+      <Row gutter={20} className="dashBoard_chart">
+        <Col span={16}>
+          <CryptoChart />
+        </Col>
+        <Col span={8}>
+          <CryptoPair />
+        </Col>
+      </Row>
     </div>
   );
 };

@@ -17,3 +17,31 @@
 .dashBoard_buttons > * {
   margin-left: 20px;
 }
+
+.btn {
+  /* line-height: 1.5715;
+  height: 32px; */
+  padding: 6.5px 15px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  color: #ccc;
+  cursor: pointer;
+  /* 
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center; */
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btnDark {
+  background-color: #212f3c;
+}
+
+.dashBoard_chart {
+  margin-top: 20px;
+}

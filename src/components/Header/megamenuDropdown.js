@@ -15,7 +15,7 @@ const menu = (
     ]}
   />
 );
-export const FirstDropdown = () => {
+export const MegamenuDropdown = () => {
   return (
     <Dropdown overlay={menu} className="headerMenu_dd">
       <a href="/#">
