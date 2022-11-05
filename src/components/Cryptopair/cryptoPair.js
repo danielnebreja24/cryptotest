@@ -3,16 +3,21 @@ import { EllipsisOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 // import { Table } from "antd";
 import "./cryptoPair.css";
+import CryptoContext from "../../context/cryptoContext";
+import { useContext } from "react";
 
-export const CryptoPair = (props) => {
+export const CryptoPair = () => {
+  const { crypto } = useContext(CryptoContext);
+  const { starCrypto } = useContext(CryptoContext);
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    setData(props.data);
-  });
+    setData(crypto);
+  }, [crypto]);
 
-  const handleChange = (e) => {
-    // props.
+  const handleStar = (e) => {
+    starCrypto(e);
   };
 
   return (
@@ -40,15 +45,9 @@ export const CryptoPair = (props) => {
                     <tr>
                       <td>
                         {item.star ? (
-                          <StarFilled
-                            onClick={() => handleChange(item)}
-                            className="tableStar"
-                          />
+                          <StarFilled onClick={() => handleStar(item)} className="tableStar" />
                         ) : (
-                          <StarOutlined
-                            onClick={() => handleChange(item)}
-                            className="tableStar"
-                          />
+                          <StarOutlined onClick={() => handleStar(item)} className="tableStar" />
                         )}
                       </td>
                       <td>{item.coin}</td>
@@ -56,11 +55,7 @@ export const CryptoPair = (props) => {
                       <td>{item.volume}</td>
                       <td>
                         <span
-                          className={
-                            item.change.charAt(0) === "+"
-                              ? "txtSuccess"
-                              : "txtDanger"
-                          }
+                          className={item.change.charAt(0) === "+" ? "txtSuccess" : "txtDanger"}
                         >
                           {item.change}
                         </span>
