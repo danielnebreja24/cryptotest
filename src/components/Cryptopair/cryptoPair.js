@@ -1,24 +1,18 @@
-import { EllipsisOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
-// import axios from "axios";
-import { useEffect, useState } from "react";
-// import { Table } from "antd";
+import { useEffect, useState, useContext } from "react";
 import "./cryptoPair.css";
 import CryptoContext from "../../context/cryptoContext";
-import { useContext } from "react";
+import { EllipsisOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
 
 export const CryptoPair = () => {
   const { crypto } = useContext(CryptoContext);
   const { starCrypto } = useContext(CryptoContext);
+  const { loadChart } = useContext(CryptoContext);
 
   const [data, setData] = useState([]);
 
   useEffect(() => {
     setData(crypto);
   }, [crypto]);
-
-  const handleStar = (e) => {
-    starCrypto(e);
-  };
 
   return (
     <div className="mainPair_div">
@@ -42,12 +36,12 @@ export const CryptoPair = () => {
             {data.length
               ? data.map((item) => {
                   return (
-                    <tr>
+                    <tr onClick={() => loadChart(item.id, item.coin)}>
                       <td>
                         {item.star ? (
-                          <StarFilled onClick={() => handleStar(item)} className="tableStar" />
+                          <StarFilled onClick={() => starCrypto(item)} className="tableStar" />
                         ) : (
-                          <StarOutlined onClick={() => handleStar(item)} className="tableStar" />
+                          <StarOutlined onClick={() => starCrypto(item)} className="tableStar" />
                         )}
                       </td>
                       <td>{item.coin}</td>

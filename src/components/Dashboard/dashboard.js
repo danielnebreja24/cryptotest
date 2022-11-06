@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { cryptoData } from "../../data/cryptoData";
 import { CryptoChart } from "../Cryptochart/cryptoChart";
 import { CryptoPair } from "../Cryptopair/cryptoPair";
-import { Instrument } from "../Instrument/instrument";
+import { CryptoTile } from "../CryptoTile/cryptoTile";
 import "./dashboard.css";
 
 export const Dashboard = () => {
@@ -24,8 +24,8 @@ export const Dashboard = () => {
           <Button type="primary">New Project</Button>
         </span>
       </div>
-      {/* CRYPTO INSTRUMENT PANEL */}
-      <Instrument />
+      {/* CRYPTO TILE PANEL */}
+      <CryptoTile />
       <Row gutter={20} className="dashBoard_chart">
         <Col span={16}>
           {/* CRYPTO CHART PANEL */}

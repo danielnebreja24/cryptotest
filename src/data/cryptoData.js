@@ -14,80 +14,90 @@ export const cryptoData = [
     star: false,
     coin: "ETH",
     price: 0.02309756,
-    volume: 427.563,
+    volume: "427.563",
     change: "+1.91",
-    icon: Eth
+    icon: Eth,
+    id: "ethereum"
   },
   {
     star: false,
     coin: "XRP",
     price: 0.00002205,
-    volume: 132.691,
+    volume: "132.691",
     change: "+10.64",
-    icon: Xrp
+    icon: Xrp,
+    id: "xrp"
   },
   {
     star: false,
     coin: "ETC",
     price: 0.0007779,
-    volume: 32.982,
+    volume: "32.982",
     change: "-6.71",
-    icon: Etc
+    icon: Etc,
+    id: "ethereum-classic"
   },
   {
     star: false,
     coin: "LTC",
     price: 0.00485685,
-    volume: 31.268,
+    volume: "31.268",
     change: "+1.88",
-    icon: Ltc
+    icon: Ltc,
+    id: "litecoin"
   },
   {
     star: false,
     coin: "XMR",
     price: 0.00700518,
-    volume: 28.567,
+    volume: "28.567",
     change: "-1.26",
-    icon: Xmr
+    icon: Xmr,
+    id: "monero"
   },
   {
     star: false,
     coin: "BSC",
     price: 0.02105473,
-    volume: 25.96,
+    volume: "25.96",
     change: "+0.10",
-    icon: Bsc
+    icon: Bsc,
+    id: "bscpad"
   },
   {
     star: false,
     coin: "ABC",
     price: 0.02613303,
-    volume: 21.597,
+    volume: "21.597",
     change: "+3.20",
-    icon: Abc
+    icon: Abc,
+    id: "alphabitcoinfund"
   },
   {
     star: false,
     coin: "TRX",
     price: 0.00000165,
-    volume: 14.106,
+    volume: "14.106",
     change: "-0.61",
-    icon: Trx
+    icon: Trx,
+    id: "tron"
   },
   {
     star: false,
     coin: "SC",
-    price: 0.00000026,
-    volume: 9.531,
+    price: 0.0000026,
+    volume: "9.531",
     change: "+13.04",
-    icon: Sc
+    icon: Sc,
+    id: "siacoin"
   },
   {
     star: false,
     coin: "OMG",
     price: 0.00019483,
-    volume: 8.82,
+    volume: "8.820",
     change: "+3.67",
-    icon: Omg
+    icon: Omg,
+    id: "omg"
   }
 ];

@@ -2,10 +2,11 @@ import { Tag } from "antd";
 import { useContext } from "react";
 import CryptoContext from "../../context/cryptoContext";
 import Dollar from "../../images/dollar.png";
-import "./instrument.css";
+import "./cryptoTile.css";
 
-export const Instrument = () => {
-  const { crypto } = useContext(CryptoContext);
+export const CryptoTile = () => {
+  const { starredCrypto } = useContext(CryptoContext);
+  const { loadChart } = useContext(CryptoContext);
 
   return (
     <div className="mainInstrument_div">
@@ -26,10 +27,12 @@ export const Instrument = () => {
           Since last week
         </div>
       </div>
-      {crypto.map((item) => {
+      {starredCrypto.map((item) => {
+        let usdVal = parseFloat(item.volume.replace(".", "")) * item.price;
+
         if (item.star) {
           return (
-            <div className="instrumentItem_div">
+            <div className="instrumentItem_div" onClick={() => loadChart(item.id, item.coin)}>
               <div className="instrumentHead">
                 {item.coin}/BTC
                 <span className="instrumentLogo">
@@ -37,9 +40,9 @@ export const Instrument = () => {
                 </span>
               </div>
               <div className="instrumentValue">
-                <b>$53,252</b>2.30 BTC
+                <b>{item.price.toFixed(5)}</b>${usdVal.toFixed(3)}
               </div>
-              <div className="instrumentVolume">Volume: {item.volume}</div>
+              <div className="instrumentVolume">Volume: {item.volume.replace(".", ",")} BTC</div>
             </div>
           );
         }
