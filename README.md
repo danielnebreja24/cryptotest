@@ -43,16 +43,16 @@ A static/hard coded data of crypto currency that can be narrowed by searching in
 
 An input field where you can search data from crypto pairs. Columns that can be search are:
 
-*coin name
-*coin price
-*coin volume
-*coin change
+* coin name
+* coin price
+* coin volume
+* coin change
 
 
 ### Tools Used
 
-*context-api (For state management and global states)
-*ant-design (For UI and icons)
-*axios (For api fetching)
-*react-chart (For the bar graph chart)
-*moment (For date formatting)
+* context-api (For state management and global states)
+* ant-design (For UI and icons)
+* axios (For api fetching)
+* react-chart (For the bar graph chart)
+* moment (For date formatting)
