@@ -32,7 +32,7 @@ A tile crypto currencies that can be found at the top of the dashboard. Once a c
 
 #### Crypto Chart
 
-A real/live chart data from an api that serves as an illustration of thecurrent price of a specific crypto currency. You can update the data displayed in the chart by clicking a crypto pair or clicking a crypto tile.
+A real/live chart data from an api that serves as an illustration of the current price of a specific crypto currency. You can update the data displayed in the chart by clicking a crypto pair or clicking a crypto tile.
 
 
 #### Crypto Pair
