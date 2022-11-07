@@ -4,9 +4,9 @@ import CryptoContext from "../../context/cryptoContext";
 import { EllipsisOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
 
 export const CryptoPair = () => {
-  const { crypto } = useContext(CryptoContext);
-  const { starCrypto } = useContext(CryptoContext);
-  const { loadChart } = useContext(CryptoContext);
+  const { crypto } = useContext(CryptoContext); //CONTEXT FOR CRYPTO PAIR DATA
+  const { starCrypto } = useContext(CryptoContext); //CONTEXT FUNCTION TO STAR OR UNSTAR CRYPTO PAIR
+  const { loadChart } = useContext(CryptoContext); //CONTEXT FUNCTION TO LOAD THE CHART BY CLICKING SPECIFIC CRYPTO PAIR
 
   const [data, setData] = useState([]);
 
@@ -20,6 +20,7 @@ export const CryptoPair = () => {
         <b>Markets</b> <EllipsisOutlined />
       </div>
       <div className="bodyBable_div">
+        {/* TABLE FOR THE CRYPTO PAIR DATA */}
         <table className="cryptoPair_table">
           <thead>
             <tr>
@@ -36,7 +37,7 @@ export const CryptoPair = () => {
             {data.length
               ? data.map((item) => {
                   return (
-                    <tr onClick={() => loadChart(item.id, item.coin)}>
+                    <tr>
                       <td>
                         {item.star ? (
                           <StarFilled onClick={() => starCrypto(item)} className="tableStar" />
@@ -44,13 +45,11 @@ export const CryptoPair = () => {
                           <StarOutlined onClick={() => starCrypto(item)} className="tableStar" />
                         )}
                       </td>
-                      <td>{item.coin}</td>
-                      <td>{item.price}</td>
-                      <td>{item.volume}</td>
-                      <td>
-                        <span
-                          className={item.change.charAt(0) === "+" ? "txtSuccess" : "txtDanger"}
-                        >
+                      <td onClick={() => loadChart(item.id, item.coin)}>{item.coin}</td>
+                      <td onClick={() => loadChart(item.id, item.coin)}>{item.price}</td>
+                      <td onClick={() => loadChart(item.id, item.coin)}>{item.volume}</td>
+                      <td onClick={() => loadChart(item.id, item.coin)}>
+                        <span className={item.change.charAt(0) === "+" ? "txtSuccess" : "txtDanger"}>
                           {item.change}
                         </span>
                       </td>

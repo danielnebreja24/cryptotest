@@ -1,20 +1,13 @@
 import { Button, Col, Row } from "antd";
-import { useEffect, useState } from "react";
-import { cryptoData } from "../../data/cryptoData";
 import { CryptoChart } from "../Cryptochart/cryptoChart";
 import { CryptoPair } from "../Cryptopair/cryptoPair";
 import { CryptoTile } from "../CryptoTile/cryptoTile";
 import "./dashboard.css";
 
 export const Dashboard = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    setData(cryptoData);
-  }, []);
-
   return (
     <div className="mainDashboard_div">
+      {/* DASHBOARD HEADER THAT CONTAINS THE TITLE AND THE BUTTONS */}
       <div className="dashBoard_header">
         <span className="dashBoard_title">
           <b>Crypto</b> Dashboard
@@ -24,16 +17,13 @@ export const Dashboard = () => {
           <Button type="primary">New Project</Button>
         </span>
       </div>
-      {/* CRYPTO TILE PANEL */}
-      <CryptoTile />
+      <CryptoTile /> {/* CRYPTO TILE PANEL */}
       <Row gutter={20} className="dashBoard_chart">
         <Col span={16}>
-          {/* CRYPTO CHART PANEL */}
-          <CryptoChart />
+          <CryptoChart /> {/* CRYPTO CHART PANEL */}
         </Col>
         <Col span={8}>
-          {/* CRYPTO PAIR PANEL */}
-          <CryptoPair data={data} />
+          <CryptoPair /> {/* CRYPTO PAIR PANEL */}
         </Col>
       </Row>
     </div>

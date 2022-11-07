@@ -1,9 +1,8 @@
-import "./cryptoChart.css";
 import { Button } from "antd";
 import { Chart as ChartJS } from "chart.js/auto";
 import { Chart } from "react-chartjs-2";
 import { useContext } from "react";
-// import axios from "axios";
+import "./cryptoChart.css";
 import CryptoContext from "../../context/cryptoContext";
 import {
   HomeOutlined,
@@ -14,12 +13,12 @@ import {
 } from "@ant-design/icons";
 
 export const CryptoChart = () => {
-  const { chartData } = useContext(CryptoContext);
+  const { chartData } = useContext(CryptoContext); //CONTEXT FOR CHART REAL/LIVE DATA FROM A CRYPTOCURRENCY API
 
   return (
-    <div className="mainChart_div">
+    <div className="mainChart_div" data-testid="cryptoChart">
       <div className="headerChart_div">
-        <b>{chartData.title}/BTC</b>
+        <b>{chartData?.title}/BTC</b>
         <span className="headerChart_buttons">
           <btn className="btn btn-sm btnDark">1m</btn>
           <Button type="primary" size="small">

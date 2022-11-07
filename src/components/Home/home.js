@@ -5,7 +5,9 @@ import "./home.css";
 export const Home = () => {
   return (
     <div className="mainHome_div">
+      {/* HEADER COMPONENT */}
       <Header />
+      {/* DASHBOARD COMPONENT */}
       <Dashboard />
     </div>
   );

@@ -1,4 +1,4 @@
-.mainInstrument_div {
+.mainCryptoTile_div {
   height: 140px;
   width: 100%;
   display: inline-flex;
@@ -8,7 +8,7 @@
   overflow: auto;
 }
 
-.instrumentItem_div {
+.cryptoTileItem_div {
   min-width: 230px;
   height: 118px;
   background-color: #212f3c;
@@ -18,7 +18,7 @@
   cursor: pointer;
 }
 
-.instrumentHead {
+.cryptoTileHead {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
@@ -28,7 +28,7 @@
   font-weight: bold;
 }
 
-.instrumentLogo {
+.cryptoTileLogo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,29 +38,29 @@
   background-color: #333c45;
 }
 
-.instrumentLogo > img {
+.cryptoTileLogo > img {
   /* height: 20px; */
   width: 18px;
   /* height: 80%; */
 }
 
-.instrumentValue {
+.cryptoTileValue {
   color: #ccc;
   font-size: 17px;
 }
 
-.instrumentValue > * {
+.cryptoTileValue > * {
   margin-right: 7px;
 }
 
-.instrumentVolume {
+.cryptoTileVolume {
   margin-top: 1px;
   color: #ccc;
   font-size: 12.5px;
   /* letter-spacing: 0.6; */
 }
 
-.instrumentTag {
+.cryptoTileTag {
   font-size: 11px !important;
   line-height: 13px !important;
   margin-right: 7px;

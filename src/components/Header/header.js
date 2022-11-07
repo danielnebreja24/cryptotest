@@ -21,13 +21,14 @@ export const Header = () => {
       </div>
       {/* RIGHT MENU OF THE HEADER */}
       <div className="headerRight_div">
+        {/* BELL NOTIFICATION ICON */}
         <Badge color="#447BBF" size="small" count="4">
           <BellOutlined className="headerRight_icon" />
         </Badge>
         <img src={MsgIcon} className="headerRight_icon msgIcon" alt="menuIcon" /> {/* MESSAGE ICON */}
-        <Avatar className="headerClickable" size={22} src={FlagIcon} />
-        <ExpandOutlined className="headerRight_icon" />
-        <Avatar className="headerClickable" shape="square" size={35} src={UserAvatar} />
+        <Avatar className="headerClickable" size={22} src={FlagIcon} /> {/* USA FLAG ICON */}
+        <ExpandOutlined className="headerRight_icon" /> {/* EXPAND ICON */}
+        <Avatar className="headerClickable" shape="square" size={35} src={UserAvatar} /> {/*USER AVATAR ICON */}
       </div>
     </div>
   );
